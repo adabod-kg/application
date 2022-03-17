@@ -13,9 +13,210 @@
     "diagrams": [
       {
         "title": "Diagram",
-        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
-        "diagramType": "STRIDE",
-        "id": 0
+        "thumbnail": "./public/content/images/thumbnail.cia.jpg",
+        "diagramType": "CIA",
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 127,
+                "y": 43
+              },
+              "angle": 0,
+              "id": "87cbb7cc-7db1-4bd5-89f8-8cbe716bdc07",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "attacker"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 442,
+                "y": 237
+              },
+              "angle": 0,
+              "id": "1c2a2751-9f48-4d49-b344-ff43f81648ab",
+              "z": 3,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "STRIDE",
+                  "type": "Information disclosure",
+                  "title": "Hacker",
+                  "threatId": "2b60d574-5681-409d-b167-b78b875fcad5"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "modelType": "CIA",
+                  "type": "Confidentiality",
+                  "title": "Hacker",
+                  "description": "Accessing sensitive information",
+                  "threatId": "2e714436-ee7a-48f9-8770-cb8a90c71969"
+                },
+                {
+                  "ruleId": "80f32309-4f8a-4676-993b-7a37cbf62df1",
+                  "title": "Scraping",
+                  "type": "Confidentiality",
+                  "modelType": "CIA",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "See OWASP Automated Threat #11:\nCollecting accessible data and/or processed output from the application",
+                  "mitigation": "Detect fake or compromised accounts, ensure information is accessible only with authentication and authorisation",
+                  "threatId": "9ef884f2-1701-455d-b538-2b54aafdec52"
+                },
+                {
+                  "ruleId": "fe90a897-3ff2-47a5-94db-2a4d6f17bb57",
+                  "title": "Spamming",
+                  "type": "Integrity",
+                  "modelType": "CIA",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "description": "See OWASP Automated Threat #17:\nStoring malicious such as malware, Iframe distribution, photographs & videos, advertisements, referrer spam and tracking/surveillance code",
+                  "mitigation": "Defences include detecting embedded malicious code, controling interaction frequency and enforcement of a single unique action",
+                  "threatId": "419e9d8c-fa2e-4664-bcd4-3e9dfe48dbbf"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Secret store"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 88,
+                "y": 256
+              },
+              "angle": 0,
+              "id": "088d108f-e6ab-4313-a212-d0fa5fb4aa6d",
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Customer"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 251,
+                "y": 296
+              },
+              "target": {
+                "id": "1c2a2751-9f48-4d49-b344-ff43f81648ab"
+              },
+              "vertices": [],
+              "id": "30f38b25-5773-4482-8815-5f2fc76bdf0b",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 3",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "size": {
+                "width": 10,
+                "height": 10
+              },
+              "smooth": true,
+              "source": {
+                "x": 379,
+                "y": 142
+              },
+              "target": {
+                "x": 378,
+                "y": 417
+              },
+              "vertices": [],
+              "id": "27a03db8-dfed-4f52-a67f-3a3601f770a5",
+              "z": 6,
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.2580382904539553,
+                    "offset": 32.74866249266564
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Firewall",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 790
+        }
       }
     ],
     "reviewer": "Adabod reviewer"
